@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Scripteur Luau</title>
+    <style>
+        /* --- TON CODE CSS --- */
+        body {
+            background-color: #0f172a;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 50px 20px;
+            margin: 0;
+        }
+        .container { max-width: 900px; margin: auto; }
+        h1 { color: #38bdf8; font-size: 2.5rem; margin-bottom: 10px; }
+        .subtitle { color: #94a3b8; font-size: 1.1rem; margin-bottom: 40px; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            border-color: #38bdf8;
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+        h3 { color: #38bdf8; margin-top: 0; }
+        
+        .contact-btn {
+            display: inline-block;
+            margin-top: 50px;
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+        .contact-btn:hover { background: white; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🚀 Mon Portfolio de Scripteur Luau</h1>
+        <p class="subtitle">Scripts optimisés, sécurisés et performants pour Roblox.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>⚔️ Système de Combat</h3>
+                <p>Combos fluides, détection de hitbox précise et effets visuels (VFX).</p>
+            </div>
+            
+            <div class="card">
+                <h3>🐾 Système de Pets</h3>
+                <p>DataStore optimisé, système de rareté et suivi du joueur fluide.</p>
+            </div>
+
+            <div class="card">
+                <h3>💰 Économie & Shop</h3>
+                <p>Achat d'items, inventaire persistant et interface (UI) moderne.</p>
+            </div>
+        </div>
+
+        <a href="#" class="contact-btn" id="discord-btn">Me contacter sur Discord</a>
+    </div>
+
+    <script>
+        /* --- TON CODE JS --- */
+        document.getElementById('discord-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            const pseudo = "TonPseudo#0000"; // REMPLACE PAR TON VRAI DISCORD
+            navigator.clipboard.writeText(pseudo);
+            alert("Mon Discord a été copié : " + pseudo + "\nAjoute-moi pour discuter de ton projet !");
+        });
+    </script>
+</body>
+</html>
+
+
